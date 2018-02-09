@@ -1,0 +1,16 @@
+def letter_count(str)
+  hash = Hash.new
+  i = 0
+  empty_space = " "
+  while i < str.length
+    if !str[i].include?(" ")
+      if !hash.include?(str[i])
+        hash.store(str[i], 1)
+      else
+        hash[str[i]] += 1
+      end
+    end
+    i += 1
+  end
+return hash
+end
