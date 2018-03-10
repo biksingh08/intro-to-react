@@ -10,20 +10,29 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
      <script type="text/babel">
        class Bikram extends React.Component {
+         constructor(){
+           super();
+           this.state = {name:'Bikram'}
+         }
          render() {
            return (
              <div>
-               <h1>Interesing Facts about Bikram</h1>
+               <h1>Interesing Facts about {this.state.name}</h1>
                 <ul>
-                    <li>Multi talented </li>
-                    <li>Likes coding </li>
-                    <li>Very active </li>
-                    <li>Never quits </li>
+                    <li>{interestingFacts.first}</li>
+                    <li>{interestingFacts.second}</li>
+                    <li>{interestingFacts.third}</li>
+                    <li>{interestingFacts.fourth}</li>
                 </ul>
              </div>
            );
          }
        }
+       const interestingFacts = {
+         first: "Multi talented",
+         second: "Likes coding",
+         third: "Very active",
+         fourth: "Never quits"};
        ReactDOM.render(
          <Bikram />, document.getElementById('myapp')
        );
